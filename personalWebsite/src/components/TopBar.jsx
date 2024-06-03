@@ -9,9 +9,9 @@ function TopBar() {
     "text-3xl hover:text-accent transition ease-in-out delay-150 justify-center mx-6 ";
   return (
     <>
-      <nav className="h-20 fixed top-0 left-0 right-0">
+      <nav className="h-20 fixed top-0 left-0 right-0 z-5">
         <div className="w-screen h-full bg-header flex items-center  justify-center text-4xl text-textColor">
-          <div className="flex items-center">
+          <div className="flex items-center z-5">
             <TiThMenu
               className={hidden ? menuClass : (menuClass += "rotate-90")}
               onClick={() => setHidden(!hidden)}
@@ -50,12 +50,12 @@ function TopBar() {
       <div
         className={
           hidden
-            ? ` hidden`
-            : ` flex items-center justify-center *:transition-opacity h-66 w-fit bg-header text-textColor text-3xl rounded-lg`
+            ? ` opacity-0`
+            : ` fixed top-16 items-center justify-center *:transition-opacity h-66 w-fit bg-header text-textColor text-3xl rounded-lg`
         }
       >
         <nav className="flex flex-col">
-          <a className=" hover:text-accent hover:scale-105 duration-300 mt-20 mb-3 mx-8 transition ease-in-out delay-150">
+          <a className=" hover:text-accent hover:scale-105 duration-300 mt-2 mb-3 mx-8 transition ease-in-out delay-150">
             About Me
           </a>
           <a className=" hover:text-accent hover:scale-105 duration-300 my-3 mx-8 transition ease-in-out delay-150">
